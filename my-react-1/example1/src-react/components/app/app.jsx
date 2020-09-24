@@ -15,11 +15,23 @@ export default class App extends Component {
         
     // }
     state={
-        comments: [
-            {username:'Tom',content:'React is very good'},
+        // comments: [
+        //     {username:'Tom',content:'React is very good'},
 
-            {username:'jack', content:"react is very bad"},
-        ]
+        //     {username:'jack', content:"react is very bad"},
+        // ]
+        comments:[]
+    }
+
+    componentDidMount(){
+        setTimeout(()=>{
+            const comments =  [
+                            {username:'Tom',content:'React is very good'},
+            
+                            {username:'jack', content:"react is very bad"},
+                        ]
+                        this.setState({comments})
+        },2000)
     }
 
 
